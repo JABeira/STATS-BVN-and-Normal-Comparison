@@ -1,7 +1,9 @@
 import json
 import numpy as np
 
-import src.Plotter as Plot
+from src.Plotter import RVScatterPlot
+from src.Normal_Gen import generateNormalSimulations
+
 
 #Reading Constants file
 try:
@@ -14,5 +16,7 @@ except (FileNotFoundError) as e:
 print("Running simulation with the following parameters:", constants)
 
 
-x = np.random.rand(50)  
-y = np.random.rand(50)
+x = generateNormalSimulations(constants["ux"], constants["sx"], constants["samples"]) 
+y = generateNormalSimulations(constants["uy"], constants["sy"], constants["samples"]) 
+
+RVScatterPlot("X,Y Normals","red",x,y)
