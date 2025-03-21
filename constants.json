@@ -1,8 +1,8 @@
 {
-    "ux":2,
+    "ux":0,
     "uy":0,
-    "sx":10,
-    "sy":1,
-    "covariance":0,
-    "samples":10000
+    "sx":5,
+    "sy":2.5,
+    "covariance":15,
+    "samples":50000
 }
